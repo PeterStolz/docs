@@ -345,10 +345,10 @@ Configure Site Replication
          .. code-block:: shell
 
             Bucket replication status:
-            ●  1/1 Buckets in sync
+            -  1/1 Buckets in sync
 
             Policy replication status:
-            ●  5/5 Policies in sync
+            -  5/5 Policies in sync
 
             User replication status:
             No Users present
@@ -628,7 +628,7 @@ The summary information includes the number of **Synced** and **Failed** items f
 
         .. code-block::
  
-           ●  Bucket config replication summary for: images
+           -  Bucket config replication summary for: images
  
            Bucket          | MINIO2          | MINIO3          | MINIO4         
            Tags            |                 |                 |                
@@ -636,7 +636,7 @@ The summary information includes the number of **Synced** and **Failed** items f
            Quota           |                 |                 |                
            Retention       |                 |                 |                
            Encryption      |                 |                 |                
-           Replication     | ✔               | ✔               | ✔        
+           Replication     | Y               | Y               | Y        
 
       - ``mc admin replicate status minio3 --all``
 
@@ -647,18 +647,18 @@ The summary information includes the number of **Synced** and **Failed** items f
         .. code-block::
 
            Bucket replication status:
-           ●  1/1 Buckets in sync
+           -  1/1 Buckets in sync
           
            Policy replication status:
-           ●  5/5 Policies in sync
+           -  5/5 Policies in sync
           
            User replication status:
-           ●  1/1 Users in sync
+           -  1/1 Users in sync
           
            Group replication status:
-           ●  0/2 Groups in sync
+           -  0/2 Groups in sync
           
            Group           | MINIO2          | MINIO3          | MINIO4         
-           ittechs         | ✗  in-sync      |                 | ✗  in-sync    
-           managers        | ✗  in-sync      |                 | ✗  in-sync    
+           ittechs         | N  in-sync      |                 | N  in-sync    
+           managers        | N  in-sync      |                 | N  in-sync    
        

@@ -1,5 +1,26 @@
 # MinIO Documentation
 
+NOTE: This branch is intended for building singlehtml for MinIO, specifically for piping through Pandoc and generating a PDF.
+
+It's not expected to use this for any other reason. The pipeline here is very fragile.
+
+You need pandoc, a latex package with *all* the addons (texlive for example).
+Alternatively grab wkhtmltopdf , though this may require building and installing the library from code.
+
+Once you have it all together:
+
+```
+make linux-shtml
+cd build/SINGLEHTML/linux-shtml/singlehtml
+pandoc index.html -t latex -o MinIO_Docs_linux.pdf
+# or
+pandoc index.html -t wkhtmltopdf -o MinIO_Docs_linux.pdf
+
+```
+Make sure to update index.html *first* to update the version w/ the most recent commit in git and a simple summary of what has changed. If it's a long list we'll think of something else.
+
+The latex build might throw symbol errors. You can copy and paste them to find and replace them with something less latex fussy.
+
 ## Build Instructions
 
 MinIO uses [Sphinx](https://www.sphinx-doc.org/en/master/index.html) to generate static HTML pages using ReSTructured Text (rST).

@@ -104,7 +104,6 @@ exclude_patterns = ['includes/*', '*-template.rst']
 sitemap_url_scheme = "{link}"
 
 excludes = []
-
 if tags.has("linux"):
     html_baseurl = 'https://min.io/docs/minio/linux/'
     with open('url-excludes.yaml','r') as f:
@@ -112,7 +111,13 @@ if tags.has("linux"):
          if i['tag'] == 'linux':
             excludes = i['excludes']
             break
-
+if tags.has("singlehtml") and tags.has("linux"):
+    html_baseurl = 'https://min.io/docs/minio/linux/'
+    with open('url-excludes.yaml','r') as f:
+      for i in (yaml.safe_load_all(f)):
+         if i['tag'] == 'singlehtml':
+            excludes = i['excludes']
+            break
 elif tags.has("macos"):
     html_baseurl = 'https://min.io/docs/minio/macos/'
     with open('url-excludes.yaml','r') as f:

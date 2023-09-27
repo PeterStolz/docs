@@ -193,7 +193,7 @@ The output resembles the following:
 
    mc replicate resync status /data
    Resync status summary:
-   ● arn:minio:replication::6593d572-4dc3-4bb9-8d90-7f79cc612f01:data                                           
+   - arn:minio:replication::6593d572-4dc3-4bb9-8d90-7f79cc612f01:data                                           
       Status: Ongoing
       Replication Status | Size (Bytes)    | Count          
       Replicated         | 2.3 GiB         | 18             

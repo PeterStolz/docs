@@ -11,6 +11,30 @@ MinIO Object Storage for |platform|
 MinIO is an object storage solution that provides an Amazon Web Services S3-compatible API and supports all core S3 features. 
 MinIO is built to deploy anywhere - public or private cloud, baremetal infrastructure, orchestrated environments, and edge infrastructure.
 
+.. cond:: singlehtml
+
+   This PDF artifact is a point-in-time snapshot of the MinIO Documentation as of the commit and date (MM/DD/YYYY) specified.
+   This artifact is intended for use by select MinIO customers only as part of compliance policies, and should not be used in place of the hosted MinIO `Kubernetes <https://min.io/docs/minio/kubernetes/upstream>`__ or `Linux <https://min.io/docs/minio/linux>`__ documentation.
+   
+
+   .. list-table::
+      :header-rows: 1
+      :width: 100%
+      :widths: 30 30 40
+
+      * - Authors
+        - Version
+        - Notes
+
+      * - | Ravind Kumar
+          | Daryl White
+          | Andrea Longo
+
+        - | Commit `22919db <https://github.com/minio/docs/commit/22919db>`__
+          | 09/18/2023
+      
+        - Initial work to create SingleHTML output for supporting PDF builds
+
 .. cond:: linux
 
    This site documents Operations, Administration, and Development of MinIO deployments on Linux platforms for the latest stable version of MinIO: |minio-tag|.
@@ -179,7 +203,7 @@ Any file uploaded to ``play`` should be considered public and non-protected.
       MinIO Admin Client <https://min.io/docs/minio/linux/reference/minio-mc-admin.html?ref=docs>
       Integrations <https://min.io/docs/minio/linux/integrations/integrations.html?ref=docs>
 
-.. cond:: linux
+.. cond:: linux and not (singlehtml)
 
    .. toctree::
       :titlesonly:
@@ -194,6 +218,21 @@ Any file uploaded to ``play`` should be considered public and non-protected.
       /reference/minio-mc-deprecated
       /reference/minio-server/minio-server
       /integrations/integrations
+
+.. cond:: linux and singlehtml
+
+   .. toctree::
+      :titlesonly:
+      :hidden:
+
+      Software Development Kits (SDK) <https://min.io/docs/minio/linux/developers/minio-drivers.html?ref=docs>
+      Security Token Service (STS) <https://min.io/docs/minio/linux/developers/security-token-service.html?ref=docs>
+      Object Lambda <https://min.io/docs/minio/linux/developers/transforms-with-object-lambda.html?ref=docs>
+      File Transfer Protocol <https://min.io/docs/minio/linux/developers/file-transfer-protocol.html?ref=docs>
+      MinIO Client <https://min.io/docs/minio/linux/reference/minio-mc.html?ref=docs>
+      MinIO Admin Client <https://min.io/docs/minio/linux/reference/minio-mc-admin.html?ref=docs>
+      /reference/minio-server/minio-server
+      Integrations <https://min.io/docs/minio/linux/integrations/integrations.html?ref=docs>
 
 .. cond:: k8s
 

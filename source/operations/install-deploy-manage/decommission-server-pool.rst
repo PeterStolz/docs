@@ -220,12 +220,10 @@ The command returns output similar to the following:
 
 .. code-block:: shell
 
-   ┌─────┬────────────────────────────────────────────────────────────────┬──────────────────────────────────┬────────┐
-   │ ID  │ Pools                                                          │ Capacity                         │ Status │
-   │ 1st │ https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio │  10 TiB (used) / 10  TiB (total) │ Active │
-   │ 2nd │ https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio │  60 TiB (used) / 100 TiB (total) │ Active │
-   │ 3rd │ https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio │  40 TiB (used) / 100 TiB (total) │ Active │
-   └─────┴────────────────────────────────────────────────────────────────┴──────────────────────────────────┴────────┘
+   | ID  | Pools                                                          | Capacity                         | Status |
+   | 1st | https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio |  10 TiB (used) / 10  TiB (total) | Active |
+   | 2nd | https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio |  60 TiB (used) / 100 TiB (total) | Active |
+   | 3rd | https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio |  40 TiB (used) / 100 TiB (total) | Active |
 
 The example deployment above has three pools. Each pool has four servers
 with four drives each.
@@ -290,12 +288,11 @@ The command returns output similar to the following:
 
 .. code-block:: shell
 
-   ┌─────┬────────────────────────────────────────────────────────────────┬──────────────────────────────────┬──────────┐
-   │ ID  │ Pools                                                          │ Capacity                         │ Status   │
-   │ 1st │ https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio │  10 TiB (used) / 10  TiB (total) │ Draining │
-   │ 2nd │ https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio │  60 TiB (used) / 100 TiB (total) │ Active   │
-   │ 3rd │ https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio │  40 TiB (used) / 100 TiB (total) │ Active   │
-   └─────┴────────────────────────────────────────────────────────────────┴──────────────────────────────────┴──────────┘
+   | ID  | Pools                                                          | Capacity                         | Status   |
+   | 1st | https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio |  10 TiB (used) / 10  TiB (total) | Draining |
+   | 2nd | https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio |  60 TiB (used) / 100 TiB (total) | Active   |
+   | 3rd | https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio |  40 TiB (used) / 100 TiB (total) | Active   |
+   
 
 You can retrieve more detailed information by specifying the description of
 the server pool to the command:
@@ -418,13 +415,11 @@ The command returns output similar to the following:
 
 .. code-block:: shell
 
-   ┌─────┬────────────────────────────────────────────────────────────────┬──────────────────────────────────┬────────┐
-   │ ID  │ Pools                                                          │ Capacity                         │ Status │
-   │ 1st │ https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio │  10 TiB (used) / 10  TiB (total) │ Active │
-   │ 2nd │ https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio │  95 TiB (used) / 100 TiB (total) │ Active │
-   │ 3rd │ https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio │  40 TiB (used) / 500 TiB (total) │ Active │
-   │ 4th │ https://minio-{13...16}.example.com:9000/mnt/disk{1...4}/minio │  0  TiB (used) / 500 TiB (total) │ Active │
-   └─────┴────────────────────────────────────────────────────────────────┴──────────────────────────────────┴────────┘
+   | ID  | Pools                                                          | Capacity                         | Status |
+   | 1st | https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio |  10 TiB (used) / 10  TiB (total) | Active |
+   | 2nd | https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio |  95 TiB (used) / 100 TiB (total) | Active |
+   | 3rd | https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio |  40 TiB (used) / 500 TiB (total) | Active |
+   | 4th | https://minio-{13...16}.example.com:9000/mnt/disk{1...4}/minio |  0  TiB (used) / 500 TiB (total) | Active |
 
 The example deployment above has three pools. 
 Each pool has four servers with four drives each.
@@ -487,13 +482,11 @@ The command returns output similar to the following:
 
 .. code-block:: shell
 
-   ┌─────┬────────────────────────────────────────────────────────────────┬──────────────────────────────────┬──────────┐
-   │ ID  │ Pools                                                          │ Capacity                         │ Status   │
-   │ 1st │ https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio │  10 TiB (used) / 10  TiB (total) │ Draining │
-   │ 2nd │ https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio │  95 TiB (used) / 100 TiB (total) │ Pending  │
-   │ 3rd │ https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio │  40 TiB (used) / 500 TiB (total) │ Active   │
-   │ 4th │ https://minio-{13...16}.example.com:9000/mnt/disk{1...4}/minio │  0  TiB (used) / 500 TiB (total) │ Active   │
-   └─────┴────────────────────────────────────────────────────────────────┴──────────────────────────────────┴──────────┘
+   | ID  | Pools                                                          | Capacity                         | Status   |
+   | 1st | https://minio-{01...04}.example.com:9000/mnt/disk{1...4}/minio |  10 TiB (used) / 10  TiB (total) | Draining |
+   | 2nd | https://minio-{05...08}.example.com:9000/mnt/disk{1...4}/minio |  95 TiB (used) / 100 TiB (total) | Pending  |
+   | 3rd | https://minio-{09...12}.example.com:9000/mnt/disk{1...4}/minio |  40 TiB (used) / 500 TiB (total) | Active   |
+   | 4th | https://minio-{13...16}.example.com:9000/mnt/disk{1...4}/minio |  0  TiB (used) / 500 TiB (total) | Active   |
 
 You can retrieve more detailed information by specifying the description of the server pool to the command:
 
