@@ -71,6 +71,18 @@ linux-shtml:
 	@echo "This is not intended for normal usage or even at all"
 	@echo "--------------------------------------"
 	@cp source/default-conf.py source/conf.py
+	@make sync-operator-version
+	@make sync-deps
+	@npm run build
+	@$(SPHINXBUILD) -M singlehtml "$(SOURCEDIR)" "$(BUILDDIR)/$(GITDIR)/$@" $(O) -t linux -j auto -w "build.log" -t singlehtml
+	@echo -e "Building $@ Complete\n--------------------------------------\n"
+
+k8s-shtml:
+	@echo "--------------------------------------"
+	@echo "Building for K8s Platform in Single HTML"
+	@echo "This is not intended for normal usage or even at all"
+	@echo "--------------------------------------"
+	@cp source/default-conf.py source/conf.py
 	@make sync-deps
 ifeq ($(SYNC_SDK),TRUE)
 	@make sync-sdks
@@ -78,7 +90,7 @@ else
 	@echo "Not synchronizing SDKs, pass SYNC_SDK=TRUE to synchronize SDK content"
 endif
 	@npm run build
-	@$(SPHINXBUILD) -M singlehtml "$(SOURCEDIR)" "$(BUILDDIR)/$(GITDIR)/$@" -j auto -w "build.log" $(O) -t linux -t singlehtml
+	@$(SPHINXBUILD) -M singlehtml "$(SOURCEDIR)" "$(BUILDDIR)/$(GITDIR)/$@" -j auto -w "build.log" $(O) -t k8s -t singlehtml
 	@echo -e "Building Linux SingleHTML Complete\n--------------------------------------\n"
 
 

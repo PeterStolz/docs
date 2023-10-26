@@ -30,10 +30,10 @@ MinIO is built to deploy anywhere - public or private cloud, baremetal infrastru
           | Daryl White
           | Andrea Longo
 
-        - | Commit `22919db <https://github.com/minio/docs/commit/22919db>`__
-          | 09/18/2023
+        - | Commit `ed963c6 <https://github.com/minio/docs/commit/ed963c6>`__
+          | 10/23/23
       
-        - Initial work to create SingleHTML output for supporting PDF builds
+        - Initial work to create K8s SingleHTML output for supporting PDF builds
 
 .. cond:: linux
 
